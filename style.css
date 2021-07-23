@@ -509,6 +509,25 @@ background-image: linear-gradient(315deg, #d4418e 0%, #0652c5 74%);
     margin-bottom: -10px;
     font-family:'Montserrat', sans-serif;
 }
+.resume-margin a{
+    text-decoration: none;
+    margin: auto;
+    padding: 8px 8px 5px 8px;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+    border-radius: 5px;
+    background: black;
+    color: rgb(163, 163, 163);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+.resume-margin a:hover{
+    background: black;
+    background-image: linear-gradient(315deg, #9921e8 0%, #5f72be 74%);
+
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+    color: white;
+}
 
 
 
