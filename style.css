@@ -40,7 +40,7 @@ section{
 /* header section of the page */
 
 #body-header{
-    height: 65vh;
+
     width: 100%;
     opacity: 1;
     padding-top: 1.2rem;
@@ -93,7 +93,13 @@ section{
     color: white;
     margin-bottom: 0.7rem;
 } 
-
+.header-text
+{
+    font-family: 'Zen Loop', cursive;
+    color: white;
+    margin-bottom: -30px;
+    padding-bottom: 15px;
+}
 s-list{
     list-style-type: none;
     padding-left: 0px;
@@ -136,7 +142,7 @@ s-list{
     margin: auto ;
 }
 #profile img{
-    margin-top: -17vh;
+    margin-top: 5%;
     height: 100%;
     width: 100%;
     min-width: 100px;
@@ -147,9 +153,16 @@ s-list{
     box-shadow: 0px 0px 10px 4px rgb(33, 32, 34);;
     border-radius: 50%;
 }
+#profile img:hover
+{
+    border: 2px solid;
+    border-color: rgb(85, 49, 49);
+    box-shadow: 0px 0px 10px 4px rgb(78, 6, 36);;
+    border-radius: 50%;
+}
 #description{
     /* margin: 30px; */
-    margin-top: -15vh;
+    margin-top: 2%;
     margin-left: 10vw;
     margin-right: 10vw;
     font-family: 'Roboto Mono', monospace;
