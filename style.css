@@ -83,7 +83,8 @@ section{
 /* social media and name */
 
 #name-social-container{
-    margin-top: 10vh;
+    /* margin-top: 10vh; */
+    margin-top: 5%;
 }
 #my-name{
     font-family: 'Shadows Into Light', cursive;
@@ -136,6 +137,7 @@ s-list{
     background-attachment: fixed;
     width: 100%;
 }
+
 #profile{
     height: 12rem;
     width: 12rem;
@@ -171,6 +173,28 @@ s-list{
     color: rgb(56, 31, 68);
 }
 
+/* about me for mobile */
+@media screen and (max-width:900px) {
+    #about-me{
+        height: auto;
+        background-image: url(images/about-me2.jpg);
+        /* background-image: url(images/key.jpg); */
+        background-size: cover;
+        background-position: center;
+    }
+
+    #description{
+        /* margin: 30px; */
+        margin-top: 2%;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: justify;
+        color: rgb(29, 5, 41)
+    }
+}
 
 
 
@@ -265,12 +289,7 @@ s-list{
     border-radius: 1px;
     /* background: orangered; */
     background-color: #d4418e;
-background-image: linear-gradient(315deg, #d4418e 0%, #0652c5 74%);
-
-
-
-
-
+    background-image: linear-gradient(315deg, #d4418e 0%, #0652c5 74%);
 }
 .skill-percent{
     line-height: 40px;
@@ -282,6 +301,19 @@ background-image: linear-gradient(315deg, #d4418e 0%, #0652c5 74%);
     font-size: 15px;
 }
 
+/* modifiying the content for mobile */
+@media screen and(max-width:900px) {
+    .container{
+        grid-template-columns: repeat(2,1fr);
+        padding: 2rm 50px;
+    }
+}
+@media screen and(max-width:650) {
+    .container{
+        grid-template-columns: 1fr;
+    }
+}
+
 
 /* education section */
 #education{
@@ -291,6 +323,16 @@ background-image: linear-gradient(315deg, #d4418e 0%, #0652c5 74%);
     background-size: cover; 
     background-attachment: fixed;
     opacity: 0.9; 
+}
+/* updating the background of education for mobile */
+@media screen and (max-width:900px) {
+    #education{
+        background-image: url(images/education2.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; 
+        opacity: 0.9; 
+    }
 }
 .edu-header{
     display: flex;
@@ -326,11 +368,23 @@ background-image: linear-gradient(315deg, #d4418e 0%, #0652c5 74%);
 
 
 /* work experince section */
+
 #experience{
     background-image: url(images/work-img.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 0.9;
+}
+/* updating the background image for mobile */
+@media screen and (max-width:900px)
+{
+    #experience{
+        background-image: url(images/work-img2.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
 .timeline{
     margin-top: 50px;
@@ -339,6 +393,8 @@ background-image: linear-gradient(315deg, #d4418e 0%, #0652c5 74%);
     margin-bottom: 50px;
 
 }
+/* setting all the odd boxes on the left side */
+
 .timeline-box
 {
     position: relative;
@@ -346,6 +402,11 @@ background-image: linear-gradient(315deg, #d4418e 0%, #0652c5 74%);
     width: 40%;
     left: 5%;
 
+}
+/* setting all the even boxes on the right side */
+.timeline-box:nth-child(2n)
+{
+    left: 54%;
 }
 /* timeline divider section */
 .timeline-divider{
@@ -358,6 +419,7 @@ background-image: linear-gradient(315deg, #d4418e 0%, #0652c5 74%);
     border: 1px dashed  black;
 
 }
+
 /* adding the starting dot in timeline */
 .timeline-box:nth-child(2n+1)::after {
     content: '';
@@ -385,6 +447,8 @@ background-image: linear-gradient(315deg, #d4418e 0%, #0652c5 74%);
     background-color: rgb(75, 86, 233);
     z-index: 1;
 }
+
+
 .timeline-icon{
     position: sticky;
     top: 10%;
@@ -394,11 +458,7 @@ background-image: linear-gradient(315deg, #d4418e 0%, #0652c5 74%);
     
 }
 
-/* setting all the even boxes on the right side */
-.timeline-box:nth-child(2n)
-{
-    left: 54%;
-}
+
 
 .exp-header{
     display: flex;
@@ -431,6 +491,38 @@ background-image: linear-gradient(315deg, #d4418e 0%, #0652c5 74%);
 }
 
 
+/* setting the common media controls for exp and education section */
+
+/* making it compatible with mobiles */
+@media screen and (max-width:900px) {
+    .timeline-divider{
+        left: 5%;
+    }
+    /* adjusting the timeline box */
+    .timeline-box
+    {
+        width: 80%;
+        left: 10%;
+    }
+    /* brining all the right side boxes to center also */
+    .timeline-box:nth-child(2n)
+    {
+        left: 10%;
+        width: 80%;
+    }
+    /* adding the starting dot in timeline */
+    .timeline-box:nth-child(2n+1)::after {
+        content: '';
+        left: -9.33%;
+        border-radius: 50%;
+        z-index: 1;
+    }
+    .timeline-box:nth-child(2n)::after {
+        content: '';
+        left: -9.33%;
+    }
+
+}
 
 
 /* Portfolio section */
@@ -441,7 +533,16 @@ background-image: linear-gradient(315deg, #d4418e 0%, #0652c5 74%);
     background-attachment: fixed;
     font-weight: bold;
 }
-
+@media screen and (max-width:900px) {
+    #portfolio{
+        background-image: url(images/port-background2.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        font-weight: bold;
+        /* height: 100%; */
+    }
+}
 #portfolio-container{
     display: flex;
     padding-top: 0 50px;
@@ -571,6 +672,8 @@ background-image: linear-gradient(315deg, #d4418e 0%, #0652c5 74%);
     display: flex;
 }
 
+
+
 #my-details-container {
     width: 35%;
     margin-left: 6%;
@@ -670,5 +773,37 @@ button:focus {
 name-social-container-bottom{
     margin: auto;
 }
+/* updatign the container to columns for mobile */
+@media screen and (max-width:900px)
+{
+    #contact-container {
+        display: flex;
+        flex-direction: column;
+    }
+    #my-details-container {
+        width: 80%;
+        margin-left: 6%;
+    }
+    #contact-form-container {
+        width: 70%;
+        margin-left: 6%;
+    }
+    #contact-form button[type="submit"] {
+        margin-left: 25%;
+        font-size: 0.75rem;
+        margin-top: 5%;
+        border-radius: 8px;
+    }
+}
 
 
+
+
+
+/* updating the headings for mobile view */
+@media screen and (max-width:900px) {
+
+    .section-heading span {
+        font-size: 30px;
+    }
+}
